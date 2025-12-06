@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBattleground: Trials of Merlin | ₹250 Entry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-mark">⚔️</div>
+                    <div class="logo-text">
+                        <span class="brand-name">DEVBATTLEGROUND</span>
+                        <span class="brand-tagline">Trials of Merlin</span>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#about">About</a>
+                    <a href="#houses">Houses</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#prizes">Prizes</a>
+                    <a href="#faq">FAQ</a>
+                    <button class="btn-nav" onclick="openRegistration()">
+                        <span>Join Battle - ₹250</span>
+                    </button>
+                </div>
+                
+                <button class="mobile-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="magic-runes"></div>
+            <div class="grid-pattern"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-glow"></span>
+                    <span class="badge-text">⚡ MAGICAL CODING TOURNAMENT ⚡</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-main">DEVBATTLEGROUND</span>
+                    <span class="title-sub">Trials of Merlin : Hogwarts Legacy</span>
+                </h1>
+                
+                <p class="hero-description">
+    <span class="hero-number">4</span> Legendary Houses  
+    <span class="hero-number">20</span> Elite Teams
+    <span class="hero-number">2</span> Champions Emerge From Each
+</p>
+                
+                <!-- Price Tag -->
+                <div class="price-tag">
+                    <div class="price-label">Entry Fee</div>
+                    <div class="price-amount">₹250</div>
+                    <div class="price-desc">per team</div>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-widget">
+                    <div class="countdown-label">⏰ Submission Closes In</div>
+                    <div class="countdown-timer">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <button class="btn-primary-large" onclick="openRegistration()">
+                        <span class="btn-icon">🏰</span>
+                        <span>Join Battle - ₹250</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-pill">
+                        <span class="stat-icon">🎯</span>
+                        <span>Only 20 Slots</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-icon">💰</span>
+                        <span>₹4,000 Prize Pool</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-icon">🏆</span>
+                        <span>Expert Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to Explore</span>
+        </div>
+    </section>
+
+    <!-- About DevBattleground -->
+    <section id="about" class="about-platform">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>⚔️</span>
+                    <span>ABOUT DEVBATTLEGROUND</span>
+                </div>
+                <h2>Where Competition <span class="highlight">Breeds Excellence</span></h2>
+                <p class="section-description">
+                    DevBattleground isn't your typical hackathon.We're a gamified arena where serious developers 
+                    pay to compete, receive brutally honest expert reviews, and battle for limited seats.
+                </p>
+            </div>
+            
+            <div class="platform-features">
+                <div class="feature-box">
+                    <div class="feature-icon">💎</div>
+                    <h3>Curated Competition</h3>
+                    <p>₹250 entry filters casual participants.Only committed developers compete.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Honest Reviews</h3>
+                    <p>Industry veteran provides real, professional-grade feedback.No sugar-coating.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Real Stakes</h3>
+                    <p>Limited seats, cash prizes, and live evaluation.This is real competition.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Skill Evolution</h3>
+                    <p>Battle-tested developers emerge stronger.Level up through real combat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About This Hackathon -->
+    <section class="hackathon-intro">
+        <div class="container">
+            <div class="intro-split">
+                <div class="intro-visual">
+                    <div class="visual-card">
+                        <div class="visual-icon">🏰</div>
+                        <div class="visual-stats">
+                            <div class="visual-stat">
+                                <span class="stat-num">4</span>
+                                <span class="stat-label">Houses</span>
+                            </div>
+                            <div class="visual-stat">
+                                <span class="stat-num">20</span>
+                                <span class="stat-label">Teams</span>
+                            </div>
+                            <div class="visual-stat">
+                                <span class="stat-num">8</span>
+                                <span class="stat-label">Winners</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="intro-content">
+                    <div class="section-badge">
+                        <span>✨</span>
+                        <span>TRIALS OF MERLIN</span>
+                    </div>
+                    <h2>A Magical Coding Tournament</h2>
+                    <p>
+                        Inspired by Hogwarts Legacy, four ancient houses rise to compete in the ultimate 
+                        test of coding prowess.Choose your allegiance, build your masterpiece, and battle 
+                        for glory in a house-based championship.
+                    </p>
+                    
+                    <div class="intro-highlights">
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Open track - Build anything in any domain</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>5 teams per house - Limited exclusive seats</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Live project explanation with expert reviewer</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>2 winners per house - Champion & Runner-up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Houses Section -->
+    <!-- Houses Section -->
+<!-- Houses Section -->
+<section id="houses" class="houses-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span>🏰</span>
+                <span>CHOOSE YOUR HOUSE</span>
+            </div>
+            <h2>Four Houses Await Your <span class="highlight">Allegiance</span></h2>
+            <p class="section-description">
+                Let the Sorting Hat decide your destiny.
+            </p>
+        </div>
+        
+        <!-- Houses Grid with Floating Card -->
+        <div class="houses-container">
+            <!-- Floating Sorting Hat Card (Centered Overlay) -->
+            <div class="sorting-hat-floating-card">
+                <div class="hat-animation">
+                    <div class="sorting-hat">🎩</div>
+                    <div class="magic-sparkles">
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">✨</span>
+                    </div>
+                </div>
+                <div class="sorting-content">
+                    <h3 class="sorting-title">Ready to be Sorted?</h3>
+                    <p class="sorting-desc">Let the Sorting Hat decide your destiny</p>
+                    <button class="btn-sorting" onclick="openRegistration()">
+                        <span class="btn-sorting-text">Join the Tournament</span>
+                        <span class="btn-sorting-price">₹250 per team</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="btn-arrow">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="houses-grid">
+                <!-- Gryffindor -->
+                <div class="house-card gryffindor" data-house="gryffindor">
+                    <div class="house-aura gryffindor-aura"></div>
+                    <div class="house-header">
+                        <div class="house-crest">🦁</div>
+                        <h3 class="house-name">GRYFFINDOR</h3>
+                        <p class="house-motto">Where dwell the brave at heart</p>
+                    </div>
+                    <div class="house-body">
+                        <div class="house-traits">
+                            <span class="trait">Courage</span>
+                            <span class="trait">Daring</span>
+                            <span class="trait">Chivalry</span>
+                        </div>
+                        <div class="house-stats">
+                            <div class="house-stat">
+                                <span class="stat-label">Total Seats</span>
+                                <span class="stat-value">5</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slytherin -->
+                <div class="house-card slytherin" data-house="slytherin">
+                    <div class="house-aura slytherin-aura"></div>
+                    <div class="house-header">
+                        <div class="house-crest">🐍</div>
+                        <h3 class="house-name">SLYTHERIN</h3>
+                        <p class="house-motto">Cunning folk use any means</p>
+                    </div>
+                    <div class="house-body">
+                        <div class="house-traits">
+                            <span class="trait">Ambition</span>
+                            <span class="trait">Cunning</span>
+                            <span class="trait">Leadership</span>
+                        </div>
+                        <div class="house-stats">
+                            <div class="house-stat">
+                                <span class="stat-label">Total Seats</span>
+                                <span class="stat-value">5</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ravenclaw -->
+                <div class="house-card ravenclaw" data-house="ravenclaw">
+                    <div class="house-aura ravenclaw-aura"></div>
+                    <div class="house-header">
+                        <div class="house-crest">🦅</div>
+                        <h3 class="house-name">RAVENCLAW</h3>
+                        <p class="house-motto">Wit beyond measure</p>
+                    </div>
+                    <div class="house-body">
+                        <div class="house-traits">
+                            <span class="trait">Wisdom</span>
+                            <span class="trait">Creativity</span>
+                            <span class="trait">Intelligence</span>
+                        </div>
+                        <div class="house-stats">
+                            <div class="house-stat">
+                                <span class="stat-label">Total Seats</span>
+                                <span class="stat-value">5</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hufflepuff -->
+                <div class="house-card hufflepuff" data-house="hufflepuff">
+                    <div class="house-aura hufflepuff-aura"></div>
+                    <div class="house-header">
+                        <div class="house-crest">🦡</div>
+                        <h3 class="house-name">HUFFLEPUFF</h3>
+                        <p class="house-motto">Just and loyal</p>
+                    </div>
+                    <div class="house-body">
+                        <div class="house-traits">
+                            <span class="trait">Loyalty</span>
+                            <span class="trait">Patience</span>
+                            <span class="trait">Hard Work</span>
+                        </div>
+                        <div class="house-stats">
+                            <div class="house-stat">
+                                <span class="stat-label">Total Seats</span>
+                                <span class="stat-value">5</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>⚙️</span>
+                    <span>HOW IT WORKS</span>
+                </div>
+                <h2>Your Path to <span class="highlight">Victory</span></h2>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>House</h3>
+                        <p>Four houses.Each house has only 5 slots.First come, first served</p>
+                    </div>
+                </div>
+                
+                <div class="step-arrow">→</div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Register (₹250)</h3>
+                        <p>Pay ₹250 per team to secure your seat</p>
+                    </div>
+                </div>
+                
+                <div class="step-arrow">→</div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Build & Submit</h3>
+                        <p>Build your project in any domain using any tech.Submit by Dec 20, 17:00 IST.No extensions</p>
+                    </div>
+                </div>
+                
+                <div class="step-arrow">→</div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Live Explanation</h3>
+                        <p>Present your project live to the expert reviewer on Dec 21.Defend your technical choices</p>
+                    </div>
+                </div>
+                
+                <div class="step-arrow">→</div>
+                
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Winners Announced</h3>
+                        <p>Reviewer selects 1 winner (₹700) and 1 runner-up (₹300) per house</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prize Breakdown -->
+    <section id="prizes" class="prizes-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>💰</span>
+                    <span>PRIZES & REWARDS</span>
+                </div>
+                <h2>Battle for <span class="highlight">Glory & Gold</span></h2>
+            </div>
+            
+            <div class="prize-structure">
+                <div class="prize-per-house">
+                    <h3>🏆 Per House Prizes</h3>
+                    <div class="prize-breakdown">
+                        <div class="prize-tier winner">
+                            <div class="tier-badge">🥇 Champion</div>
+                            <div class="tier-amount">₹700</div>
+                            <div class="tier-desc">Per house winner</div>
+                        </div>
+                        <div class="prize-tier runner">
+                            <div class="tier-badge">🥈 Runner-Up</div>
+                            <div class="tier-amount">₹300</div>
+                            <div class="tier-desc">Per house runner-up</div>
+                        </div>
+                    </div>
+                    <p class="prize-note">× 4 houses = 8 total winners</p>
+                </div>
+                
+                <div class="prize-total-pool">
+                    <div class="pool-label">Total Prize Pool</div>
+                    <div class="pool-amount">₹4,000</div>
+                    <div class="pool-breakdown">(₹700 × 4) + (₹300 × 4)</div>
+                    <div class="pool-graphic">
+                        <div class="pool-bar">
+                            <div class="pool-fill winner-fill" style="width: 70%">
+                                <span>Winners: ₹2,800</span>
+                            </div>
+                            <div class="pool-fill runner-fill" style="width: 30%">
+                                <span>Runners: ₹1,200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="all-participants">
+                <h3>✨ All Participants Receive</h3>
+                <div class="participant-benefits">
+                    <div class="benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Expert-signed certificate</span>
+                    </div>
+                    <div class="benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Detailed professional feedback</span>
+                    </div>
+                    <div class="benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Access to DevBattleground community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="timeline-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span>📅</span>
+                <span>TOURNAMENT TIMELINE</span>
+            </div>
+            <h2>Mark Your <span class="highlight">Calendar</span></h2>
+        </div>
+        
+        <div class="timeline-track">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-date">NOW</div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                    <h3>Registration Open</h3>
+                    <p>Pay ₹250 entry fee.   Limited to 20 teams only</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 19, 00:00 IST</div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                    <h3>Submission Opens On</h3>
+                    <p>Start building your project.   Any domain, any tech stack.  Be creative!</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 - Critical -->
+            <div class="timeline-item critical">
+                <div class="timeline-date">Dec 20, 17:00 IST</div>
+                <div class="timeline-connector critical-connector"></div>
+                <div class="timeline-content critical-content">
+                    <h3>⚠️ Submission Deadline</h3>
+                    <p>Final deadline.   Late submissions will not be accepted.  No exceptions.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 21</div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                    <h3>Live Review Day</h3>
+                    <p>Present your project live to expert reviewer.  Answer questions.  Defend choices.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 21 (Later)</div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                    <h3>🏆 Winners Announced</h3>
+                    <p>Results declared. Prizes transferred instantly. Certificates distributed.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timezone-banner">
+            ⏰ All times in IST (Indian Standard Time)
+        </div>
+    </div>
+</section>
+    <!-- Add this section after the Timeline Section and before the Prizes Section -->
+
+<!-- Reviewer Section -->
+<!-- Reviewer Section -->
+<section class="reviewer-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <span>👨‍⚖️</span>
+                <span>MEET THE GRAND WIZARD</span>
+            </div>
+            <h2>Your <span class="highlight">Expert Judge</span></h2>
+            <p class="section-description">
+                Projects evaluated by an industry veteran. Expect brutally honest, professional-grade feedback. 
+            </p>
+        </div>
+        
+        <div class="reviewer-card">
+            <div class="reviewer-visual">
+    <div class="avatar-container">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring-2"></div>
+        <div class="avatar-main">
+            <img src="images/reviewer.jpeg" alt="Expert Reviewer" class="reviewer-image">
+        </div>
+        <!-- LinkedIn Tooltip Below Image -->
+        <a href="https://www.linkedin.com/in/rajarajan-k?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="linkedin-tooltip">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="linkedin-icon-small">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+            </svg>
+            <span class="linkedin-text">Connect on LinkedIn</span>
+        </a>
+    </div>
+</div>
+            
+            <div class="reviewer-content">
+                <div class="reviewer-title">
+                    <h3>Industry Veteran</h3>
+                    <p class="reviewer-role">Senior Mobile Application Developer</p>
+                </div>
+                
+                <div class="reviewer-experience">
+                    <div class="exp-highlight">
+                        <div class="exp-years">8 Years</div>
+                        <div class="exp-label">Industry Experience</div>
+                    </div>
+                    <div class="exp-companies">
+                        <div class="company-badge">
+                            <span class="company-icon">🏢</span>
+                            <span class="company-name">Zoho & PayPal</span>
+                        </div>
+                        <p class="company-desc">Senior-level positions at leading tech companies</p>
+                    </div>
+                </div>
+                
+                <div class="reviewer-quote">
+                    <div class="quote-mark">"</div>
+                    <p>Expect brutally honest feedback. I don't sugarcoat.  I evaluate like your code is going to production tomorrow. This isn't a participation trophy event.</p>
+                </div>
+                
+                <div class="evaluation-section">
+                    <h4>📊 Evaluation Criteria</h4>
+                    <div class="criteria-grid">
+                        <div class="criteria-bar-wrapper">
+                            <div class="criteria-info">
+                                <span class="criteria-name">Technical Implementation</span>
+                                <span class="criteria-percent">30%</span>
+                            </div>
+                            <div class="criteria-bar">
+                                <div class="criteria-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="criteria-bar-wrapper">
+                            <div class="criteria-info">
+                                <span class="criteria-name">Innovation & Creativity</span>
+                                <span class="criteria-percent">25%</span>
+                            </div>
+                            <div class="criteria-bar">
+                                <div class="criteria-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="criteria-bar-wrapper">
+                            <div class="criteria-info">
+                                <span class="criteria-name">Code Quality & Architecture</span>
+                                <span class="criteria-percent">20%</span>
+                            </div>
+                            <div class="criteria-bar">
+                                <div class="criteria-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="criteria-bar-wrapper">
+                            <div class="criteria-info">
+                                <span class="criteria-name">Presentation & Communication</span>
+                                <span class="criteria-percent">15%</span>
+                            </div>
+                            <div class="criteria-bar">
+                                <div class="criteria-fill" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="criteria-bar-wrapper">
+                            <div class="criteria-info">
+                                <span class="criteria-name">Practical Value & Usability</span>
+                                <span class="criteria-percent">10%</span>
+                            </div>
+                            <div class="criteria-bar">
+                                <div class="criteria-fill" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviewer-expertise">
+                    <h4>🎯 Areas of Expertise</h4>
+                    <div class="expertise-tags">
+                        <span class="expertise-tag">Mobile Development</span>
+                        <span class="expertise-tag">System Architecture</span>
+                        <span class="expertise-tag">Code Review</span>
+                        <span class="expertise-tag">Technical Leadership</span>
+                        <span class="expertise-tag">Performance Optimization</span>
+                    </div>
+                </div>
+                
+                <div class="reviewer-warning">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 6V10M10 14H10.01M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Only the best projects will be recognized. Prepare for honest, professional-grade evaluation.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Why Paid -->
+    <section class="why-paid">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>💎</span>
+                    <span>WHY ₹250 ENTRY?</span>
+                </div>
+                <h2>Your Investment in <span class="highlight">Excellence</span></h2>
+            </div>
+            
+            <div class="value-proposition">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Curated Participants</h3>
+                    <p>You compete only with serious, committed developers.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">💼</div>
+                    <h3>Professional Review</h3>
+                    <p>Get expert feedback.Industry veteran with 8 years experience reviews your work.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>Real Competition</h3>
+                    <p>Limited seats create real stakes.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Skill Evolution</h3>
+                    <p>Honest feedback, real competition, and professional evaluation accelerate your growth.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>❓</span>
+                    <span>FREQUENTLY ASKED QUESTIONS</span>
+                </div>
+                <h2>Got <span class="highlight">Questions? </span></h2>
+            </div>
+            
+            <div class="faq-list">
+              
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How many members can be in a team?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Teams can have 1-5 members.₹250 is per team, not per person.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How will houses be assigned?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Houses will be assigned based on the team name.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What can we build? </h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anything!  This is an open track hackathon.Web apps, mobile apps, AI/ML any domain in software base, any tech stack.Must be original work built during the hackathon period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>When will prizes be distributed?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Winners receive prize money immediately after results are announced on Dec 21.Instant bank transfer to team leader.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Is the live review session mandatory?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes.Absence = Disqualification.All team members should be available on Dec 21 for the live explanation session.</p>
+                    </div>
+                </div>
+                
+               
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How will projects be judged?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Expert evaluates based on: Technical implementation (30%), Innovation & creativity (25%), Code quality (20%), Presentation (15%), and Practical value (10%).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Your House Awaits</h2>
+                <p>20 teams.4 houses.₹4,000 in prizes.Only the best will rise.</p>
+                <button class="btn-cta-mega" onclick="openRegistration()">
+                    <span class="cta-text">Join the Battle - ₹250</span>
+                    <span class="cta-subtext">Per Team</span>
+                </button>
+                <p class="cta-urgency">⚡ Limited seats filling fast ⚡</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-mark">⚔️</div>
+                        <div class="logo-text">
+                            <span class="brand-name">DEVBATTLEGROUND</span>
+                            <span class="brand-tagline">Trials of Merlin</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">The competitive arena for serious developers.₹250 per team entry.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="#about">About</a>
+                        <a href="#houses">Houses</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#timeline">Timeline</a>
+                        <a href="#prizes">Prizes</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    
+                  
+                    
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevBattleground.All rights reserved.</p>
+                <p>Made with ⚔️ and code</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-body">
+                <div class="modal-icon">🏰</div>
+                <h2>Enter the Tournament</h2>
+                <p>You'll be redirected to the registration form.Complete all details to secure your house seat.</p>
+                <div class="modal-price">
+                    <span class="modal-price-label">Entry Fee:</span>
+                    <span class="modal-price-amount">₹250</span>
+                    <span class="modal-price-desc">per team</span>
+                </div>
+                <button class="btn-modal" onclick="redirectToForm()">
+                    <span>Continue to Registration</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
