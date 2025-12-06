@@ -3185,3 +3185,282 @@ section {
         font-size: 24px;
     }
 }
+/* Prizes Section - FIXED MOBILE RESPONSIVE */
+.prizes-section {
+    padding: clamp(60px, 12vw, 100px) 0;
+}
+
+.prize-structure {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.prize-per-house {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: clamp(24px, 5vw, 48px);
+    width: 100%;
+}
+
+.prize-per-house h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.prize-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.prize-tier {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 16px;
+    padding: clamp(20px, 4vw, 32px) clamp(16px, 3vw, 24px);
+    text-align: center;
+    min-width: 0;
+}
+
+.tier-badge {
+    font-size: clamp(11px, 2.5vw, 14px);
+    font-weight: 700;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.tier-amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(32px, 8vw, 48px);
+    font-weight: 900;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.tier-desc {
+    font-size: clamp(10px, 2vw, 13px);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.prize-note {
+    text-align: center;
+    font-size: clamp(11px, 2.5vw, 14px);
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.prize-total-pool {
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    padding: clamp(28px, 5vw, 48px) clamp(20px, 4vw, 48px);
+    text-align: center;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.pool-label {
+    font-size: clamp(11px, 2.5vw, 14px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.pool-amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(42px, 12vw, 72px);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.pool-breakdown {
+    font-size: clamp(11px, 2.5vw, 14px);
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.pool-graphic {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.pool-bar {
+    display: flex;
+    height: clamp(40px, 10vw, 60px);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.pool-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 2.5vw, 14px);
+    font-weight: 700;
+    padding: 4px;
+}
+
+.pool-fill span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.winner-fill {
+    background: var(--gradient-gold);
+}
+
+.runner-fill {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.all-participants {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: clamp(28px, 5vw, 48px);
+    width: 100%;
+}
+
+.all-participants h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.participant-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: clamp(12px, 2.5vw, 15px);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.benefit svg {
+    stroke: var(--accent-success);
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Mobile Specific Overrides */
+@media (max-width: 768px) {
+    .prize-structure {
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .prize-breakdown {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .prize-breakdown {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+    
+    .prize-tier {
+        width: 100%;
+    }
+    
+    .pool-bar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .pool-fill {
+        width: 100% !important;
+        padding: 12px;
+    }
+    
+    .participant-benefits {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .prizes-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .prize-per-house {
+        padding: 20px 16px;
+    }
+    
+    .prize-total-pool {
+        padding: 24px 16px;
+    }
+    
+    .tier-desc {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 375px) {
+    .prize-breakdown {
+        max-width: 250px;
+    }
+    
+    .tier-amount {
+        font-size: 36px;
+    }
+    
+    .pool-amount {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 320px) {
+    .prize-per-house,
+    .prize-total-pool,
+    .all-participants {
+        padding: 20px 12px;
+    }
+    
+    .tier-amount {
+        font-size: 32px;
+    }
+    
+    .pool-amount {
+        font-size: 42px;
+    }
+}
